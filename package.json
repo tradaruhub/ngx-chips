@@ -1,11 +1,11 @@
 {
-  "name": "ngx-chips",
-  "version": "2.1.0",
+  "name": "@tradaru/ngx-chips",
+  "version": "1.0.0",
   "description": "Tag Input component for Angular",
   "scripts": {
     "release": "npm run build && npm publish dist",
     "postrelease": "rm -rf dist",
-    "build": "ng-packagr -p package.json && mkdirp ./dist/dist && ncp ./modules/core/styles ./dist/core/styles && ncp ./dist/bundles/ngx-chips.umd.js ./dist/dist/ngx-chips.bundle.js",
+    "build": "ng-packagr -p package.json && mkdirp ./dist/dist && ncp ./modules/core/styles ./dist/core/styles && ncp ./dist/bundles/tradaru-ngx-chips.umd.js ./dist/dist/tradaru-ngx-chips.bundle.js",
     "server": "ng serve --port 3010",
     "start": "npm run server",
     "test": "ng test modules --browsers=ChromeHeadless --watch=false",
@@ -18,7 +18,7 @@
   "contributors": [],
   "license": "MIT",
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.803.9",
+    "@angular-devkit/build-angular": "~0.803.8",
     "@angular/animations": "^8.2.11",
     "@angular/cli": "^8.2.11",
     "@angular/common": "^8.2.11",
@@ -45,7 +45,7 @@
     "protractor": "~5.4.0",
     "rxjs": "~6.4.0",
     "tslint": "^5.17.0",
-    "typescript": "^3.5.2",
+    "typescript": "3.5.2",
     "zone.js": "~0.9.1"
   },
   "dependencies": {
@@ -76,10 +76,7 @@
   "ngPackage": {
     "$schema": "./node_modules/ng-packagr/ng-package.schema.json",
     "lib": {
-      "entryFile": "modules/index.ts",
-      "externals": {
-        "ng2-material-dropdown": "ng2-material-dropdown"
-      }
+      "entryFile": "modules/index.ts"
     },
     "whitelistedNonPeerDependencies": [
       "ng2-material-dropdown"
